@@ -1,7 +1,6 @@
 from flask import Flask, request
 from flask_restful import Api, Resource
 from flask_sqlalchemy import SQLAlchemy
-import json
 
 
 HOST = '0.0.0.0'
@@ -54,7 +53,6 @@ db.create_all()
 
 
 class Couriers(Resource):
-    # @marshal_with(courier_fields)
     def get(self, cour_id):
         res = CouriersModel.query.filter_by(courier_id=cour_id).first()
         return {"courier_id": res.courier_id,
