@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 import json
 
 
-HOST = '127.0.0.1'
+HOST = '0.0.0.0'
 PORT = 8080
 
 app = Flask(__name__)
